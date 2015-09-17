@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import "GROAuth.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [GROAuth setGoodreadsOAuthWithConsumerKey:@"aUO5nxC6zKts3EbC7qxTw" secret:@"0Zi8ALk75IH2nIhIOAGBK35b2Ge2YV1dttuxDdphmgs"];
     
     // [Optional] Power your app with Local Datastore. For more info, go to
     // https://parse.com/docs/ios_guide#localdatastore/iOS

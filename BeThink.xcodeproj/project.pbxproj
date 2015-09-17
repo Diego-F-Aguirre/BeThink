@@ -32,6 +32,13 @@
 		BCC743D81BAA6F3300A3FE1D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC743D71BAA6F3300A3FE1D /* LoginViewController.m */; };
 		BCC743DB1BAA6F4F00A3FE1D /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC743DA1BAA6F4E00A3FE1D /* SignUpViewController.m */; };
 		BCC743DE1BAA802800A3FE1D /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC743DD1BAA802800A3FE1D /* SettingsViewController.m */; };
+		BCC743F01BAB31AA00A3FE1D /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = BCC743E21BAB31AA00A3FE1D /* Base64Transcoder.c */; };
+		BCC743F11BAB31AA00A3FE1D /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = BCC743E41BAB31AA00A3FE1D /* hmac.c */; };
+		BCC743F21BAB31AA00A3FE1D /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = BCC743E61BAB31AA00A3FE1D /* sha1.c */; };
+		BCC743F31BAB31AA00A3FE1D /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC743E91BAB31AA00A3FE1D /* NSString+URLEncoding.m */; };
+		BCC743F41BAB31AA00A3FE1D /* OAuth1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC743EB1BAB31AA00A3FE1D /* OAuth1Controller.m */; };
+		BCC743F51BAB31AA00A3FE1D /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC743ED1BAB31AA00A3FE1D /* XMLDictionary.m */; };
+		BCC743F61BAB31AA00A3FE1D /* GROAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC743EF1BAB31AA00A3FE1D /* GROAuth.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +86,21 @@
 		BCC743DA1BAA6F4E00A3FE1D /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		BCC743DC1BAA802800A3FE1D /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		BCC743DD1BAA802800A3FE1D /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		BCC743DF1BAB22C500A3FE1D /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		BCC743E21BAB31AA00A3FE1D /* Base64Transcoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Base64Transcoder.c; sourceTree = "<group>"; };
+		BCC743E31BAB31AA00A3FE1D /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
+		BCC743E41BAB31AA00A3FE1D /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hmac.c; sourceTree = "<group>"; };
+		BCC743E51BAB31AA00A3FE1D /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
+		BCC743E61BAB31AA00A3FE1D /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha1.c; sourceTree = "<group>"; };
+		BCC743E71BAB31AA00A3FE1D /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha1.h; sourceTree = "<group>"; };
+		BCC743E81BAB31AA00A3FE1D /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
+		BCC743E91BAB31AA00A3FE1D /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
+		BCC743EA1BAB31AA00A3FE1D /* OAuth1Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuth1Controller.h; sourceTree = "<group>"; };
+		BCC743EB1BAB31AA00A3FE1D /* OAuth1Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuth1Controller.m; sourceTree = "<group>"; };
+		BCC743EC1BAB31AA00A3FE1D /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
+		BCC743ED1BAB31AA00A3FE1D /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
+		BCC743EE1BAB31AA00A3FE1D /* GROAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GROAuth.h; sourceTree = "<group>"; };
+		BCC743EF1BAB31AA00A3FE1D /* GROAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GROAuth.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +136,7 @@
 		BCC743851BA9CEF200A3FE1D = {
 			isa = PBXGroup;
 			children = (
+				BCC743DF1BAB22C500A3FE1D /* Podfile */,
 				BCC743901BA9CEF200A3FE1D /* BeThink */,
 				BCC743A41BA9CEF200A3FE1D /* BeThinkTests */,
 				BCC7438F1BA9CEF200A3FE1D /* Products */,
@@ -192,6 +215,9 @@
 		BCC743C11BAA6C3300A3FE1D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BCC743E01BAB31AA00A3FE1D /* Dependencies */,
+				BCC743EE1BAB31AA00A3FE1D /* GROAuth.h */,
+				BCC743EF1BAB31AA00A3FE1D /* GROAuth.m */,
 				BCC743C21BAA6CDE00A3FE1D /* AudioToolbox.framework */,
 				BCC743C31BAA6CDE00A3FE1D /* CFNetwork.framework */,
 				BCC743C41BAA6CDE00A3FE1D /* CoreGraphics.framework */,
@@ -206,6 +232,33 @@
 				BCC743BE1BAA6C0700A3FE1D /* Parse.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BCC743E01BAB31AA00A3FE1D /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				BCC743E11BAB31AA00A3FE1D /* Crypto */,
+				BCC743E81BAB31AA00A3FE1D /* NSString+URLEncoding.h */,
+				BCC743E91BAB31AA00A3FE1D /* NSString+URLEncoding.m */,
+				BCC743EA1BAB31AA00A3FE1D /* OAuth1Controller.h */,
+				BCC743EB1BAB31AA00A3FE1D /* OAuth1Controller.m */,
+				BCC743EC1BAB31AA00A3FE1D /* XMLDictionary.h */,
+				BCC743ED1BAB31AA00A3FE1D /* XMLDictionary.m */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		BCC743E11BAB31AA00A3FE1D /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				BCC743E21BAB31AA00A3FE1D /* Base64Transcoder.c */,
+				BCC743E31BAB31AA00A3FE1D /* Base64Transcoder.h */,
+				BCC743E41BAB31AA00A3FE1D /* hmac.c */,
+				BCC743E51BAB31AA00A3FE1D /* hmac.h */,
+				BCC743E61BAB31AA00A3FE1D /* sha1.c */,
+				BCC743E71BAB31AA00A3FE1D /* sha1.h */,
+			);
+			path = Crypto;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,7 +364,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCC743F31BAB31AA00A3FE1D /* NSString+URLEncoding.m in Sources */,
+				BCC743F11BAB31AA00A3FE1D /* hmac.c in Sources */,
+				BCC743F41BAB31AA00A3FE1D /* OAuth1Controller.m in Sources */,
+				BCC743F01BAB31AA00A3FE1D /* Base64Transcoder.c in Sources */,
 				BCC743D81BAA6F3300A3FE1D /* LoginViewController.m in Sources */,
+				BCC743F61BAB31AA00A3FE1D /* GROAuth.m in Sources */,
+				BCC743F51BAB31AA00A3FE1D /* XMLDictionary.m in Sources */,
+				BCC743F21BAB31AA00A3FE1D /* sha1.c in Sources */,
 				BCC743DB1BAA6F4F00A3FE1D /* SignUpViewController.m in Sources */,
 				BCC743971BA9CEF200A3FE1D /* AppDelegate.m in Sources */,
 				BCC743DE1BAA802800A3FE1D /* SettingsViewController.m in Sources */,
@@ -511,6 +571,7 @@
 				BCC743AD1BA9CEF200A3FE1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BCC743AE1BA9CEF200A3FE1D /* Build configuration list for PBXNativeTarget "BeThinkTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +580,7 @@
 				BCC743B01BA9CEF200A3FE1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
