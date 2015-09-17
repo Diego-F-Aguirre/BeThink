@@ -7,6 +7,7 @@
 //
 
 #import "BookShelfCollectionViewController.h"
+#import <Parse/Parse.h>
 
 @interface BookShelfCollectionViewController ()
 
@@ -22,7 +23,15 @@ static NSString * const reuseIdentifier = @"Cell";
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
-    [self performSegueWithIdentifier:@"showLogin" sender:self];
+    PFUser *currentUser = [PFUser currentUser];
+    
+    if (currentUser) {
+        NSLog(@"Current user: %@", currentUser.username);
+    } else {
+        [self performSegueWithIdentifier:@"showLogin" sender:self];
+    }
+    
+    
     
     // Register cell classes
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
@@ -93,5 +102,7 @@ static NSString * const reuseIdentifier = @"Cell";
 	
 }
 */
+
+
 
 @end

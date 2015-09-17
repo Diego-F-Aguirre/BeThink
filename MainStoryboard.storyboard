@@ -102,7 +102,7 @@
         <!--Login to BeThink!-->
         <scene sceneID="pfv-zn-D5o">
             <objects>
-                <viewController id="cff-en-Sot" sceneMemberID="viewController">
+                <viewController id="cff-en-Sot" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="54x-vO-zYr"/>
                         <viewControllerLayoutGuide type="bottom" id="asV-6y-HJM"/>
@@ -134,6 +134,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="login:" destination="cff-en-Sot" eventType="touchUpInside" id="4qo-nL-qae"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xxm-qR-WpK">
                                 <rect key="frame" x="16" y="255" width="182" height="20"/>
@@ -141,8 +144,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBR-3h-C18">
-                                <rect key="frame" x="216" y="251" width="62" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBR-3h-C18">
+                                <rect key="frame" x="215" y="251" width="63" height="32"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -172,15 +175,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Login to BeThink!" id="MDZ-IS-1fu"/>
+                    <connections>
+                        <outlet property="passwordField" destination="dBn-NI-1SB" id="35b-Pz-JHd"/>
+                        <outlet property="usernameField" destination="fTi-Vw-wzW" id="cbU-AQ-Mcb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="soj-20-RFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1199" y="-254"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="0uY-a1-qII">
             <objects>
-                <viewController id="Eyp-Nd-sKM" sceneMemberID="viewController">
+                <viewController id="Eyp-Nd-sKM" customClass="SettingsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NP0-pz-V6l"/>
                         <viewControllerLayoutGuide type="bottom" id="FQz-37-avh"/>
@@ -190,7 +197,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Xkk-HP-cUa"/>
+                    <navigationItem key="navigationItem" id="Xkk-HP-cUa">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="2bt-8h-dyp">
+                            <connections>
+                                <action selector="logout:" destination="Eyp-Nd-sKM" id="H9f-Ds-Xz8"/>
+                                <segue destination="cff-en-Sot" kind="push" id="Mlz-Nm-EiI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wru-UE-Bh9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -199,7 +213,7 @@
         <!--Create an account-->
         <scene sceneID="5OR-I3-tap">
             <objects>
-                <viewController id="ZvL-3d-6Ze" sceneMemberID="viewController">
+                <viewController id="ZvL-3d-6Ze" customClass="SignUpViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tDg-lp-E8V"/>
                         <viewControllerLayoutGuide type="bottom" id="eBs-XJ-4rm"/>
@@ -231,6 +245,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signup:" destination="ZvL-3d-6Ze" eventType="touchUpInside" id="EDR-Hv-Z9b"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mT8-Mf-WcS">
                                 <rect key="frame" x="16" y="198" width="288" height="30"/>
@@ -258,6 +275,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create an account" id="hKY-HG-i93"/>
+                    <connections>
+                        <outlet property="emailField" destination="mT8-Mf-WcS" id="ubN-jG-Jbs"/>
+                        <outlet property="passwordField" destination="3Xe-jQ-XU1" id="y7j-Ej-YcA"/>
+                        <outlet property="usernameField" destination="AFN-fP-DvC" id="5cB-lw-IBh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gPG-ld-XXg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -331,4 +353,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="KL7-gV-KKu"/>
+    </inferredMetricsTieBreakers>
 </document>
