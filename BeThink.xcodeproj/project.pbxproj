@@ -16,6 +16,7 @@
 		BCC743B61BA9D24300A3FE1D /* TabBar_BookShelf.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC743B31BA9D24300A3FE1D /* TabBar_BookShelf.png */; };
 		BCC743B71BA9D24300A3FE1D /* TabBar_Search.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC743B41BA9D24300A3FE1D /* TabBar_Search.png */; };
 		BCC743B81BA9D24300A3FE1D /* TabBar_Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC743B51BA9D24300A3FE1D /* TabBar_Settings.png */; };
+		BCC743BC1BAA512100A3FE1D /* BookShelfCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC743BB1BAA512100A3FE1D /* BookShelfCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,10 +40,12 @@
 		BCC743A11BA9CEF200A3FE1D /* BeThinkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeThinkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCC743A61BA9CEF200A3FE1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCC743A71BA9CEF200A3FE1D /* BeThinkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeThinkTests.m; sourceTree = "<group>"; };
-		BCC743B11BA9CF2600A3FE1D /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		BCC743B11BA9CF2600A3FE1D /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard.storyboard; path = ../MainStoryboard.storyboard; sourceTree = "<group>"; };
 		BCC743B31BA9D24300A3FE1D /* TabBar_BookShelf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabBar_BookShelf.png; sourceTree = "<group>"; };
 		BCC743B41BA9D24300A3FE1D /* TabBar_Search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabBar_Search.png; sourceTree = "<group>"; };
 		BCC743B51BA9D24300A3FE1D /* TabBar_Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabBar_Settings.png; sourceTree = "<group>"; };
+		BCC743BA1BAA512100A3FE1D /* BookShelfCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookShelfCollectionViewController.h; sourceTree = "<group>"; };
+		BCC743BB1BAA512100A3FE1D /* BookShelfCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookShelfCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +69,6 @@
 		BCC743851BA9CEF200A3FE1D = {
 			isa = PBXGroup;
 			children = (
-				BCC743B11BA9CF2600A3FE1D /* MainStoryboard.storyboard */,
 				BCC743901BA9CEF200A3FE1D /* BeThink */,
 				BCC743A41BA9CEF200A3FE1D /* BeThinkTests */,
 				BCC7438F1BA9CEF200A3FE1D /* Products */,
@@ -87,6 +89,9 @@
 			children = (
 				BCC743951BA9CEF200A3FE1D /* AppDelegate.h */,
 				BCC743961BA9CEF200A3FE1D /* AppDelegate.m */,
+				BCC743BA1BAA512100A3FE1D /* BookShelfCollectionViewController.h */,
+				BCC743BB1BAA512100A3FE1D /* BookShelfCollectionViewController.m */,
+				BCC743B11BA9CF2600A3FE1D /* MainStoryboard.storyboard */,
 				BCC743981BA9CEF200A3FE1D /* Images.xcassets */,
 				BCC7439A1BA9CEF200A3FE1D /* LaunchScreen.xib */,
 				BCC743B91BA9D24E00A3FE1D /* Images */,
@@ -237,6 +242,7 @@
 			files = (
 				BCC743971BA9CEF200A3FE1D /* AppDelegate.m in Sources */,
 				BCC743941BA9CEF200A3FE1D /* main.m in Sources */,
+				BCC743BC1BAA512100A3FE1D /* BookShelfCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
