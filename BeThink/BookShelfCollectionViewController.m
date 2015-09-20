@@ -23,14 +23,22 @@ static NSString * const reuseIdentifier = @"Cell";
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
-    PFUser *currentUser = [PFUser currentUser];
-    
-    if (currentUser) {
-        NSLog(@"Current user: %@", currentUser.username);
-    } else {
-        [self performSegueWithIdentifier:@"showLogin" sender:self];
-    }
-    
+//    PFUser *currentUser = [PFUser currentUser];
+//    
+//    if (currentUser) {
+//        NSLog(@"Current user: %@", currentUser.username);
+//    } else {
+//        [self performSegueWithIdentifier:@"showLogin" sender:self];
+//    }
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSString *urlString = [[NSString alloc] initWithFormat:@"https://www.goodreads.com/search.xml?key=aUO5nxC6zKts3EbC7qxTw=Enders+Game"];
+    NSURL *url  = [[NSURL alloc] initWithString:urlString];
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+    NSURLSessionDownloadTask *task = [session downloadTaskWithRequest:request completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
+        NSString *text = [[NSString alloc] initWithContentsOfURL:location encoding:NSUTF8StringEncoding error:nil];
+        NSLog(@"text:%@",text);
+    }];
+    [task resume];
     
     
     // Register cell classes

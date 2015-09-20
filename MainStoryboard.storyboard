@@ -57,7 +57,7 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="EFO-Bf-j4A"/>
                     <connections>
-                        <segue destination="cff-en-Sot" kind="push" identifier="showLogin" id="KL7-gV-KKu"/>
+                        <segue destination="P4t-Hm-zfB" kind="push" identifier="showLogin" id="VJT-VO-a4f"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0j7-Dt-Up3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -98,6 +98,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Tl-Ir-2A5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="767" y="473"/>
+        </scene>
+        <!--LoginSplash-->
+        <scene sceneID="Ybi-Dh-l1a">
+            <objects>
+                <viewController title="LoginSplash" id="P4t-Hm-zfB" customClass="LoginSplashViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JlX-86-oJT"/>
+                        <viewControllerLayoutGuide type="bottom" id="Iqj-Kq-7rA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6VI-hB-XWT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhT-rI-MTR">
+                                <rect key="frame" x="16" y="196" width="288" height="53"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.64705882349999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Login With Goodreads!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="login:" destination="P4t-Hm-zfB" eventType="touchUpInside" id="nt1-fY-XHv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="mhT-rI-MTR" firstAttribute="leading" secondItem="6VI-hB-XWT" secondAttribute="leadingMargin" id="1fw-oD-vJg"/>
+                            <constraint firstItem="mhT-rI-MTR" firstAttribute="trailing" secondItem="6VI-hB-XWT" secondAttribute="trailingMargin" id="fMC-0E-O0Y"/>
+                            <constraint firstAttribute="width" secondItem="mhT-rI-MTR" secondAttribute="height" multiplier="320:53" id="ift-85-Knk"/>
+                            <constraint firstItem="mhT-rI-MTR" firstAttribute="top" secondItem="JlX-86-oJT" secondAttribute="bottom" constant="132" id="ycE-Ld-pPu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Dqo-0P-KJr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4CZ-Hf-V6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1225" y="-260"/>
         </scene>
         <!--Login to BeThink!-->
         <scene sceneID="pfv-zn-D5o">
@@ -182,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="soj-20-RFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1199" y="-254"/>
+            <point key="canvasLocation" x="1783" y="246"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="0uY-a1-qII">
@@ -201,10 +245,12 @@
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="2bt-8h-dyp">
                             <connections>
                                 <action selector="logout:" destination="Eyp-Nd-sKM" id="H9f-Ds-Xz8"/>
-                                <segue destination="cff-en-Sot" kind="push" id="Mlz-Nm-EiI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="P4t-Hm-zfB" kind="push" identifier="showLogin" id="Y0R-Ff-kmJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wru-UE-Bh9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -283,7 +329,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gPG-ld-XXg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1575" y="-254"/>
+            <point key="canvasLocation" x="2175" y="246"/>
         </scene>
         <!--BookShelf-->
         <scene sceneID="HJE-bO-Pmz">
@@ -354,6 +400,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="KL7-gV-KKu"/>
+        <segue reference="VJT-VO-a4f"/>
     </inferredMetricsTieBreakers>
 </document>

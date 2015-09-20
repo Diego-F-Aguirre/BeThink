@@ -26,6 +26,8 @@
     else {
         NSLog(@"back button already hidden");
     }
+    
+    
 }
 
 
@@ -55,6 +57,7 @@
                 [alertview show];
             }
             else{
+                
                 [self.navigationController popToRootViewControllerAnimated:YES];
             }
         }];

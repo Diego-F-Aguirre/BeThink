@@ -39,6 +39,7 @@
 		BCC743F41BAB31AA00A3FE1D /* OAuth1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC743EB1BAB31AA00A3FE1D /* OAuth1Controller.m */; };
 		BCC743F51BAB31AA00A3FE1D /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC743ED1BAB31AA00A3FE1D /* XMLDictionary.m */; };
 		BCC743F61BAB31AA00A3FE1D /* GROAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC743EF1BAB31AA00A3FE1D /* GROAuth.m */; };
+		BCC743F91BAB8D8B00A3FE1D /* LoginSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC743F81BAB8D8B00A3FE1D /* LoginSplashViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,8 @@
 		BCC743ED1BAB31AA00A3FE1D /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
 		BCC743EE1BAB31AA00A3FE1D /* GROAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GROAuth.h; sourceTree = "<group>"; };
 		BCC743EF1BAB31AA00A3FE1D /* GROAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GROAuth.m; sourceTree = "<group>"; };
+		BCC743F71BAB8D8B00A3FE1D /* LoginSplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginSplashViewController.h; sourceTree = "<group>"; };
+		BCC743F81BAB8D8B00A3FE1D /* LoginSplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginSplashViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +169,8 @@
 				BCC743DA1BAA6F4E00A3FE1D /* SignUpViewController.m */,
 				BCC743DC1BAA802800A3FE1D /* SettingsViewController.h */,
 				BCC743DD1BAA802800A3FE1D /* SettingsViewController.m */,
+				BCC743F71BAB8D8B00A3FE1D /* LoginSplashViewController.h */,
+				BCC743F81BAB8D8B00A3FE1D /* LoginSplashViewController.m */,
 				BCC743B11BA9CF2600A3FE1D /* MainStoryboard.storyboard */,
 				BCC743981BA9CEF200A3FE1D /* Images.xcassets */,
 				BCC7439A1BA9CEF200A3FE1D /* LaunchScreen.xib */,
@@ -371,6 +376,7 @@
 				BCC743D81BAA6F3300A3FE1D /* LoginViewController.m in Sources */,
 				BCC743F61BAB31AA00A3FE1D /* GROAuth.m in Sources */,
 				BCC743F51BAB31AA00A3FE1D /* XMLDictionary.m in Sources */,
+				BCC743F91BAB8D8B00A3FE1D /* LoginSplashViewController.m in Sources */,
 				BCC743F21BAB31AA00A3FE1D /* sha1.c in Sources */,
 				BCC743DB1BAA6F4F00A3FE1D /* SignUpViewController.m in Sources */,
 				BCC743971BA9CEF200A3FE1D /* AppDelegate.m in Sources */,
