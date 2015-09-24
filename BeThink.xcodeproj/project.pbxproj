@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11599A4BFF9D6D6039D3C811 /* libPods-BeThink.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12F06DF3AE40C12F04425BDA /* libPods-BeThink.a */; };
+		BC7E4D681BB370FF0035D24B /* BTBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7E4D671BB370FF0035D24B /* BTBookViewController.m */; settings = {ASSET_TAGS = (); }; };
 		BCC743941BA9CEF200A3FE1D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC743931BA9CEF200A3FE1D /* main.m */; };
 		BCC743971BA9CEF200A3FE1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC743961BA9CEF200A3FE1D /* AppDelegate.m */; };
 		BCC743991BA9CEF200A3FE1D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCC743981BA9CEF200A3FE1D /* Images.xcassets */; };
@@ -32,6 +34,13 @@
 		BCC743D81BAA6F3300A3FE1D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC743D71BAA6F3300A3FE1D /* LoginViewController.m */; };
 		BCC743DB1BAA6F4F00A3FE1D /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC743DA1BAA6F4E00A3FE1D /* SignUpViewController.m */; };
 		BCC743DE1BAA802800A3FE1D /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC743DD1BAA802800A3FE1D /* SettingsViewController.m */; };
+		BCD1B4B71BB0564A0094C42A /* BookCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD1B4B61BB0564A0094C42A /* BookCollectionViewCell.m */; };
+		BCD1B4BA1BB0BF8E0094C42A /* BTSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD1B4B91BB0BF8E0094C42A /* BTSearchViewController.m */; };
+		BCD1B4BD1BB0C0DE0094C42A /* BTResultsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD1B4BC1BB0C0DE0094C42A /* BTResultsDataSource.m */; };
+		BCD1B4C01BB0C4F60094C42A /* BTAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD1B4BF1BB0C4F60094C42A /* BTAPIClient.m */; };
+		BCD1B4C31BB0D4C80094C42A /* BookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD1B4C21BB0D4C80094C42A /* BookModel.m */; };
+		BCD1B4C71BB0DDB00094C42A /* BTBookCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD1B4C51BB0DDB00094C42A /* BTBookCollectionViewCell.m */; };
+		BCD1B5031BB2FAE20094C42A /* BTBookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCD1B5021BB2FAE20094C42A /* BTBookCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +54,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12F06DF3AE40C12F04425BDA /* libPods-BeThink.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BeThink.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80CCF2845155E4037D629294 /* Pods-BeThink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeThink.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeThink/Pods-BeThink.release.xcconfig"; sourceTree = "<group>"; };
+		B8178744FB6E07E80CFC0CDE /* Pods-BeThink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeThink.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeThink/Pods-BeThink.debug.xcconfig"; sourceTree = "<group>"; };
+		BC7E4D661BB370FF0035D24B /* BTBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTBookViewController.h; sourceTree = "<group>"; };
+		BC7E4D671BB370FF0035D24B /* BTBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTBookViewController.m; sourceTree = "<group>"; };
 		BCC7438E1BA9CEF200A3FE1D /* BeThink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeThink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCC743921BA9CEF200A3FE1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCC743931BA9CEF200A3FE1D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -79,6 +93,19 @@
 		BCC743DA1BAA6F4E00A3FE1D /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		BCC743DC1BAA802800A3FE1D /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		BCC743DD1BAA802800A3FE1D /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		BCD1B4B51BB0564A0094C42A /* BookCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookCollectionViewCell.h; sourceTree = "<group>"; };
+		BCD1B4B61BB0564A0094C42A /* BookCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookCollectionViewCell.m; sourceTree = "<group>"; };
+		BCD1B4B81BB0BF8E0094C42A /* BTSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTSearchViewController.h; sourceTree = "<group>"; };
+		BCD1B4B91BB0BF8E0094C42A /* BTSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTSearchViewController.m; sourceTree = "<group>"; };
+		BCD1B4BB1BB0C0DE0094C42A /* BTResultsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTResultsDataSource.h; sourceTree = "<group>"; };
+		BCD1B4BC1BB0C0DE0094C42A /* BTResultsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTResultsDataSource.m; sourceTree = "<group>"; };
+		BCD1B4BE1BB0C4F60094C42A /* BTAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTAPIClient.h; sourceTree = "<group>"; };
+		BCD1B4BF1BB0C4F60094C42A /* BTAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTAPIClient.m; sourceTree = "<group>"; };
+		BCD1B4C11BB0D4C80094C42A /* BookModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookModel.h; sourceTree = "<group>"; };
+		BCD1B4C21BB0D4C80094C42A /* BookModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookModel.m; sourceTree = "<group>"; };
+		BCD1B4C41BB0DDB00094C42A /* BTBookCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTBookCollectionViewCell.h; sourceTree = "<group>"; };
+		BCD1B4C51BB0DDB00094C42A /* BTBookCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTBookCollectionViewCell.m; sourceTree = "<group>"; };
+		BCD1B5021BB2FAE20094C42A /* BTBookCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BTBookCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +113,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCC743CC1BAA6CDE00A3FE1D /* AudioToolbox.framework in Frameworks */,
 				BCC743CD1BAA6CDE00A3FE1D /* CFNetwork.framework in Frameworks */,
+				BCC743CC1BAA6CDE00A3FE1D /* AudioToolbox.framework in Frameworks */,
 				BCC743CE1BAA6CDE00A3FE1D /* CoreGraphics.framework in Frameworks */,
 				BCC743CF1BAA6CDE00A3FE1D /* CoreLocation.framework in Frameworks */,
 				BCC743D01BAA6CDE00A3FE1D /* libsqlite3.dylib in Frameworks */,
@@ -98,6 +125,7 @@
 				BCC743D51BAA6CDE00A3FE1D /* SystemConfiguration.framework in Frameworks */,
 				BCC743C01BAA6C0700A3FE1D /* Parse.framework in Frameworks */,
 				BCC743BF1BAA6C0700A3FE1D /* Bolts.framework in Frameworks */,
+				11599A4BFF9D6D6039D3C811 /* libPods-BeThink.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +146,7 @@
 				BCC743A41BA9CEF200A3FE1D /* BeThinkTests */,
 				BCC7438F1BA9CEF200A3FE1D /* Products */,
 				BCC743C11BAA6C3300A3FE1D /* Frameworks */,
+				F4C580E289E79893D779B7AF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,6 +166,8 @@
 				BCC743961BA9CEF200A3FE1D /* AppDelegate.m */,
 				BCC743BA1BAA512100A3FE1D /* BookShelfCollectionViewController.h */,
 				BCC743BB1BAA512100A3FE1D /* BookShelfCollectionViewController.m */,
+				BCD1B4B51BB0564A0094C42A /* BookCollectionViewCell.h */,
+				BCD1B4B61BB0564A0094C42A /* BookCollectionViewCell.m */,
 				BCC743D61BAA6F3300A3FE1D /* LoginViewController.h */,
 				BCC743D71BAA6F3300A3FE1D /* LoginViewController.m */,
 				BCC743D91BAA6F4E00A3FE1D /* SignUpViewController.h */,
@@ -148,6 +179,19 @@
 				BCC7439A1BA9CEF200A3FE1D /* LaunchScreen.xib */,
 				BCC743B91BA9D24E00A3FE1D /* Images */,
 				BCC743911BA9CEF200A3FE1D /* Supporting Files */,
+				BCD1B4B81BB0BF8E0094C42A /* BTSearchViewController.h */,
+				BCD1B4B91BB0BF8E0094C42A /* BTSearchViewController.m */,
+				BCD1B4BB1BB0C0DE0094C42A /* BTResultsDataSource.h */,
+				BCD1B4BC1BB0C0DE0094C42A /* BTResultsDataSource.m */,
+				BCD1B4BE1BB0C4F60094C42A /* BTAPIClient.h */,
+				BCD1B4BF1BB0C4F60094C42A /* BTAPIClient.m */,
+				BCD1B4C11BB0D4C80094C42A /* BookModel.h */,
+				BCD1B4C21BB0D4C80094C42A /* BookModel.m */,
+				BCD1B4C41BB0DDB00094C42A /* BTBookCollectionViewCell.h */,
+				BCD1B4C51BB0DDB00094C42A /* BTBookCollectionViewCell.m */,
+				BCD1B5021BB2FAE20094C42A /* BTBookCollectionViewCell.xib */,
+				BC7E4D661BB370FF0035D24B /* BTBookViewController.h */,
+				BC7E4D671BB370FF0035D24B /* BTBookViewController.m */,
 			);
 			path = BeThink;
 			sourceTree = "<group>";
@@ -204,8 +248,18 @@
 				BCC743CB1BAA6CDE00A3FE1D /* SystemConfiguration.framework */,
 				BCC743BD1BAA6C0700A3FE1D /* Bolts.framework */,
 				BCC743BE1BAA6C0700A3FE1D /* Parse.framework */,
+				12F06DF3AE40C12F04425BDA /* libPods-BeThink.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4C580E289E79893D779B7AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B8178744FB6E07E80CFC0CDE /* Pods-BeThink.debug.xcconfig */,
+				80CCF2845155E4037D629294 /* Pods-BeThink.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,9 +269,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCC743AB1BA9CEF200A3FE1D /* Build configuration list for PBXNativeTarget "BeThink" */;
 			buildPhases = (
+				3BF7E9E48483A37C84ADD0B5 /* Check Pods Manifest.lock */,
 				BCC7438A1BA9CEF200A3FE1D /* Sources */,
 				BCC7438B1BA9CEF200A3FE1D /* Frameworks */,
 				BCC7438C1BA9CEF200A3FE1D /* Resources */,
+				1AF6E4DC2BEDAD8B13D375EF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,7 +308,7 @@
 		BCC743861BA9CEF200A3FE1D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Diego Aguirre";
 				TargetAttributes = {
 					BCC7438D1BA9CEF200A3FE1D = {
@@ -294,6 +350,7 @@
 				BCC743991BA9CEF200A3FE1D /* Images.xcassets in Resources */,
 				BCC743B81BA9D24300A3FE1D /* TabBar_Settings.png in Resources */,
 				BCC743B61BA9D24300A3FE1D /* TabBar_BookShelf.png in Resources */,
+				BCD1B5031BB2FAE20094C42A /* BTBookCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,16 +363,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1AF6E4DC2BEDAD8B13D375EF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeThink/Pods-BeThink-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3BF7E9E48483A37C84ADD0B5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BCC7438A1BA9CEF200A3FE1D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCD1B4B71BB0564A0094C42A /* BookCollectionViewCell.m in Sources */,
+				BCD1B4C31BB0D4C80094C42A /* BookModel.m in Sources */,
+				BC7E4D681BB370FF0035D24B /* BTBookViewController.m in Sources */,
 				BCC743D81BAA6F3300A3FE1D /* LoginViewController.m in Sources */,
 				BCC743DB1BAA6F4F00A3FE1D /* SignUpViewController.m in Sources */,
 				BCC743971BA9CEF200A3FE1D /* AppDelegate.m in Sources */,
+				BCD1B4C71BB0DDB00094C42A /* BTBookCollectionViewCell.m in Sources */,
+				BCD1B4BD1BB0C0DE0094C42A /* BTResultsDataSource.m in Sources */,
 				BCC743DE1BAA802800A3FE1D /* SettingsViewController.m in Sources */,
 				BCC743941BA9CEF200A3FE1D /* main.m in Sources */,
+				BCD1B4C01BB0C4F60094C42A /* BTAPIClient.m in Sources */,
+				BCD1B4BA1BB0BF8E0094C42A /* BTSearchViewController.m in Sources */,
 				BCC743BC1BAA512100A3FE1D /* BookShelfCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +529,7 @@
 		};
 		BCC743AC1BA9CEF200A3FE1D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8178744FB6E07E80CFC0CDE /* Pods-BeThink.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -440,12 +538,18 @@
 				);
 				INFOPLIST_FILE = BeThink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/diegoaguirre/Downloads/iOScURL,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.diegoa3d.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		BCC743AD1BA9CEF200A3FE1D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80CCF2845155E4037D629294 /* Pods-BeThink.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -454,6 +558,11 @@
 				);
 				INFOPLIST_FILE = BeThink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/diegoaguirre/Downloads/iOScURL,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.diegoa3d.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -511,6 +620,7 @@
 				BCC743AD1BA9CEF200A3FE1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BCC743AE1BA9CEF200A3FE1D /* Build configuration list for PBXNativeTarget "BeThinkTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +629,7 @@
 				BCC743B01BA9CEF200A3FE1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
