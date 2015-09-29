@@ -34,10 +34,9 @@
 		BCC743D81BAA6F3300A3FE1D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC743D71BAA6F3300A3FE1D /* LoginViewController.m */; };
 		BCC743DB1BAA6F4F00A3FE1D /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC743DA1BAA6F4E00A3FE1D /* SignUpViewController.m */; };
 		BCC743DE1BAA802800A3FE1D /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC743DD1BAA802800A3FE1D /* SettingsViewController.m */; };
-		BCCBFFB81BBB26840070C4E4 /* BookShelfDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCBFFB71BBB26840070C4E4 /* BookShelfDataSource.m */; settings = {ASSET_TAGS = (); }; };
 		BCD1B4B71BB0564A0094C42A /* BookCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD1B4B61BB0564A0094C42A /* BookCollectionViewCell.m */; };
 		BCD1B4BA1BB0BF8E0094C42A /* BTSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD1B4B91BB0BF8E0094C42A /* BTSearchViewController.m */; };
-		BCD1B4BD1BB0C0DE0094C42A /* BTResultsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD1B4BC1BB0C0DE0094C42A /* BTResultsDataSource.m */; };
+		BCD1B4BD1BB0C0DE0094C42A /* BTDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD1B4BC1BB0C0DE0094C42A /* BTDataSource.m */; };
 		BCD1B4C01BB0C4F60094C42A /* BTAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD1B4BF1BB0C4F60094C42A /* BTAPIClient.m */; };
 		BCD1B4C31BB0D4C80094C42A /* BookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD1B4C21BB0D4C80094C42A /* BookModel.m */; };
 		BCD1B4C71BB0DDB00094C42A /* BTBookCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD1B4C51BB0DDB00094C42A /* BTBookCollectionViewCell.m */; };
@@ -94,14 +93,12 @@
 		BCC743DA1BAA6F4E00A3FE1D /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		BCC743DC1BAA802800A3FE1D /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		BCC743DD1BAA802800A3FE1D /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		BCCBFFB61BBB26840070C4E4 /* BookShelfDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookShelfDataSource.h; sourceTree = "<group>"; };
-		BCCBFFB71BBB26840070C4E4 /* BookShelfDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookShelfDataSource.m; sourceTree = "<group>"; };
 		BCD1B4B51BB0564A0094C42A /* BookCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookCollectionViewCell.h; sourceTree = "<group>"; };
 		BCD1B4B61BB0564A0094C42A /* BookCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookCollectionViewCell.m; sourceTree = "<group>"; };
 		BCD1B4B81BB0BF8E0094C42A /* BTSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTSearchViewController.h; sourceTree = "<group>"; };
 		BCD1B4B91BB0BF8E0094C42A /* BTSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTSearchViewController.m; sourceTree = "<group>"; };
-		BCD1B4BB1BB0C0DE0094C42A /* BTResultsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTResultsDataSource.h; sourceTree = "<group>"; };
-		BCD1B4BC1BB0C0DE0094C42A /* BTResultsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTResultsDataSource.m; sourceTree = "<group>"; };
+		BCD1B4BB1BB0C0DE0094C42A /* BTDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTDataSource.h; sourceTree = "<group>"; };
+		BCD1B4BC1BB0C0DE0094C42A /* BTDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTDataSource.m; sourceTree = "<group>"; };
 		BCD1B4BE1BB0C4F60094C42A /* BTAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTAPIClient.h; sourceTree = "<group>"; };
 		BCD1B4BF1BB0C4F60094C42A /* BTAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTAPIClient.m; sourceTree = "<group>"; };
 		BCD1B4C11BB0D4C80094C42A /* BookModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookModel.h; sourceTree = "<group>"; };
@@ -169,8 +166,6 @@
 				BCC743961BA9CEF200A3FE1D /* AppDelegate.m */,
 				BCC743BA1BAA512100A3FE1D /* BookShelfCollectionViewController.h */,
 				BCC743BB1BAA512100A3FE1D /* BookShelfCollectionViewController.m */,
-				BCCBFFB61BBB26840070C4E4 /* BookShelfDataSource.h */,
-				BCCBFFB71BBB26840070C4E4 /* BookShelfDataSource.m */,
 				BCD1B4B51BB0564A0094C42A /* BookCollectionViewCell.h */,
 				BCD1B4B61BB0564A0094C42A /* BookCollectionViewCell.m */,
 				BCC743D61BAA6F3300A3FE1D /* LoginViewController.h */,
@@ -186,8 +181,8 @@
 				BCC743911BA9CEF200A3FE1D /* Supporting Files */,
 				BCD1B4B81BB0BF8E0094C42A /* BTSearchViewController.h */,
 				BCD1B4B91BB0BF8E0094C42A /* BTSearchViewController.m */,
-				BCD1B4BB1BB0C0DE0094C42A /* BTResultsDataSource.h */,
-				BCD1B4BC1BB0C0DE0094C42A /* BTResultsDataSource.m */,
+				BCD1B4BB1BB0C0DE0094C42A /* BTDataSource.h */,
+				BCD1B4BC1BB0C0DE0094C42A /* BTDataSource.m */,
 				BCD1B4BE1BB0C4F60094C42A /* BTAPIClient.h */,
 				BCD1B4BF1BB0C4F60094C42A /* BTAPIClient.m */,
 				BCD1B4C11BB0D4C80094C42A /* BookModel.h */,
@@ -408,13 +403,12 @@
 			files = (
 				BCD1B4B71BB0564A0094C42A /* BookCollectionViewCell.m in Sources */,
 				BCD1B4C31BB0D4C80094C42A /* BookModel.m in Sources */,
-				BCCBFFB81BBB26840070C4E4 /* BookShelfDataSource.m in Sources */,
 				BC7E4D681BB370FF0035D24B /* BTBookViewController.m in Sources */,
 				BCC743D81BAA6F3300A3FE1D /* LoginViewController.m in Sources */,
 				BCC743DB1BAA6F4F00A3FE1D /* SignUpViewController.m in Sources */,
 				BCC743971BA9CEF200A3FE1D /* AppDelegate.m in Sources */,
 				BCD1B4C71BB0DDB00094C42A /* BTBookCollectionViewCell.m in Sources */,
-				BCD1B4BD1BB0C0DE0094C42A /* BTResultsDataSource.m in Sources */,
+				BCD1B4BD1BB0C0DE0094C42A /* BTDataSource.m in Sources */,
 				BCC743DE1BAA802800A3FE1D /* SettingsViewController.m in Sources */,
 				BCC743941BA9CEF200A3FE1D /* main.m in Sources */,
 				BCD1B4C01BB0C4F60094C42A /* BTAPIClient.m in Sources */,

@@ -1,29 +1,39 @@
 //
-//  BTResultsDataSource.m
+//  BTDataSource.m
 //  BeThink
 //
 //  Created by Diego Aguirre on 9/21/15.
 //  Copyright (c) 2015 Diego Aguirre. All rights reserved.
 //
 
-#import "BTResultsDataSource.h"
+#import "BTDataSource.h"
 #import "BTAPIClient.h"
 #import "BTBookCollectionViewCell.h"
 
-@implementation BTResultsDataSource
+@implementation BTDataSource
+
++ (instancetype) sharedInstance {
+    static dispatch_once_t once;
+    static id sharedInstance;
+    dispatch_once(&once, ^{
+        sharedInstance = [[self alloc] init];
+    });
+    return sharedInstance;
+}
 
 - (instancetype)init {
     self = [super init];
     if (self)
     {
-        self.books = [@[] mutableCopy];
+        self.searchedBooks = [@[] mutableCopy];
+        self.savedBooks = [@[] mutableCopy];
     }
     return self;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     BTBookCollectionViewCell * cell = (BTBookCollectionViewCell *) [collectionView dequeueReusableCellWithReuseIdentifier:@"BookCell" forIndexPath:indexPath];
-    [cell setCellWithBook:self.books[indexPath.item]];
+    [cell setCellWithBook:self.searchedBooks[indexPath.item]];
     return cell;
 }
 
@@ -34,7 +44,7 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     switch (section) {
     case 0:
-        return self.books.count;
+        return self.searchedBooks.count;
         break;
     default:
         return 0;
@@ -47,7 +57,7 @@
         if (success && results) {
             newBooks = [results mutableCopy];
         }
-        self.books = newBooks;
+        self.searchedBooks = newBooks;
         completionBlock();
         
     }];

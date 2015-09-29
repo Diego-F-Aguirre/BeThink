@@ -7,7 +7,7 @@
 //
 
 #import "BTSearchViewController.h"
-#import "BTResultsDataSource.h"
+#import "BTDataSource.h"
 #import "BookModel.h"
 #import "BTBookViewController.h"
 
@@ -17,7 +17,7 @@
 
 @property (weak, nonatomic) IBOutlet UICollectionView *resultsCollectionView;
 
-@property (strong, nonatomic) BTResultsDataSource *resultsDataSource;
+@property (strong, nonatomic) BTDataSource *resultsDataSource;
 
 @end
 
@@ -25,7 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.resultsDataSource = [BTResultsDataSource new];
+    self.resultsDataSource = [BTDataSource new];
     // Do any additional setup after loading the view.
     self.resultsCollectionView.dataSource = self.resultsDataSource;
     [self.resultsCollectionView registerNib:[UINib nibWithNibName:@"BTBookCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"BookCell"];
@@ -34,7 +34,7 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
-    [self performSegueWithIdentifier:@"showBookFromSearch" sender:self.resultsDataSource.books[indexPath.item]];
+    [self performSegueWithIdentifier:@"showBookFromSearch" sender:self.resultsDataSource.searchedBooks[indexPath.item]];
 }
 
 - (void)didReceiveMemoryWarning {

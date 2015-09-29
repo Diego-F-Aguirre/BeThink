@@ -10,13 +10,13 @@
 #import <Parse/Parse.h>
 #import "BTBookViewController.h"
 #import "BTSearchViewController.h"
-#import "BTResultsDataSource.h"
+#import "BTDataSource.h"
+#import "BookCollectionViewCell.h"
 
 
 @interface BookShelfCollectionViewController ()
 
 @property (weak, nonatomic) IBOutlet UICollectionView *bookShelfCollectionView;
-@property (strong, nonatomic) BTResultsDataSource *savedBooksDataSource;
 
 @end
 
@@ -38,8 +38,7 @@ static NSString * const reuseIdentifier = @"BookCell";
         [self performSegueWithIdentifier:@"showLogin" sender:self];
     }
     
-    self.savedBooksDataSource = [BTResultsDataSource new];
-    self.bookShelfCollectionView.dataSource = self.savedBooksDataSource;
+    self.bookShelfCollectionView.dataSource = self;
     
     [self.bookShelfCollectionView registerNib:[UINib nibWithNibName:@"BTBookCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
     
@@ -49,12 +48,30 @@ static NSString * const reuseIdentifier = @"BookCell";
     // Do any additional setup after loading the view.
 }
 
+- (void) viewDidAppear:(BOOL)animated{
+    [self.bookShelfCollectionView reloadData];
+}
 
 
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    BookCollectionViewCell * cell = (BookCollectionViewCell *) [collectionView dequeueReusableCellWithReuseIdentifier:@"BookCell" forIndexPath:indexPath];
+    [cell setCellWithBook: [BTDataSource sharedInstance].savedBooks[indexPath.item]];
+    return cell;
+}
 
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
 
-
-
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    switch (section) {
+        case 0:
+            return [BTDataSource sharedInstance].savedBooks.count;
+            break;
+        default:
+            return 0;
+    }
+}
 
 
 @end

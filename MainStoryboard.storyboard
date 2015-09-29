@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B17c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="gNK-cR-x9N">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="gNK-cR-x9N">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -492,7 +492,6 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Nre-98-Vfd">
                             <connections>
                                 <action selector="addBook:" destination="x2A-Kc-aeU" id="ajW-L5-m5b"/>
-                                <segue destination="xDK-JR-P37" kind="push" identifier="showBookInShelf" id="m3M-Jg-c71"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -540,7 +539,6 @@
         <image name="TabBar_Settings.png" width="75" height="75"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="m3M-Jg-c71"/>
         <segue reference="KL7-gV-KKu"/>
     </inferredMetricsTieBreakers>
 </document>

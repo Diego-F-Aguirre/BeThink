@@ -9,7 +9,7 @@
 #import "BTBookViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "BookShelfCollectionViewController.h"
-#import "BookShelfDataSource.h"
+#import "BTDataSource.h"
 
 
 @interface BTBookViewController ()
@@ -31,6 +31,7 @@
 
 - (IBAction)addBook:(id)sender {
     
+    [[BTDataSource sharedInstance].savedBooks addObject: self.book];
     
 }
 
