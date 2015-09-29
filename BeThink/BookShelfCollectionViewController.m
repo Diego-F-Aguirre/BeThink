@@ -9,12 +9,14 @@
 #import "BookShelfCollectionViewController.h"
 #import <Parse/Parse.h>
 #import "BTBookViewController.h"
-#import <SDWebImage/UIImageView+WebCache.h>
-
-
+#import "BTSearchViewController.h"
+#import "BTResultsDataSource.h"
 
 
 @interface BookShelfCollectionViewController ()
+
+@property (weak, nonatomic) IBOutlet UICollectionView *bookShelfCollectionView;
+@property (strong, nonatomic) BTResultsDataSource *savedBooksDataSource;
 
 @end
 
@@ -36,7 +38,10 @@ static NSString * const reuseIdentifier = @"BookCell";
         [self performSegueWithIdentifier:@"showLogin" sender:self];
     }
     
-    [self.collectionView registerNib:[UINib nibWithNibName:@"BTBookCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
+    self.savedBooksDataSource = [BTResultsDataSource new];
+    self.bookShelfCollectionView.dataSource = self.savedBooksDataSource;
+    
+    [self.bookShelfCollectionView registerNib:[UINib nibWithNibName:@"BTBookCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Register cell classes
 //    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
@@ -44,14 +49,7 @@ static NSString * const reuseIdentifier = @"BookCell";
     // Do any additional setup after loading the view.
 }
 
-- (void)awakeFromNib {
-    // Initialization code
-}
 
-- (void)setCellWithBook:(BookModel *)book {
-    self.book = book;
-    [self.bookCover sd_setImageWithURL:[NSURL URLWithString:book.imageURL]];
-}
 
 
 

@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BookModel.h"
+#import "BTBookCollectionViewCell.h"
 
 @interface BookCollectionViewCell : UICollectionViewCell
 

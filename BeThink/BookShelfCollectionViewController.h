@@ -9,9 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "BTBookCollectionViewCell.h"
 
-@interface BookShelfCollectionViewController : UICollectionViewController
-
-@property (nonatomic, strong) BookModel *book;
-@property (strong, nonatomic) IBOutlet UIImageView *bookCover;
+@interface BookShelfCollectionViewController : UICollectionViewController <UICollectionViewDelegate>
 
 @end

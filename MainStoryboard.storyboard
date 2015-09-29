@@ -43,20 +43,7 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BookCell" id="l3I-JP-0s4">
-                                <rect key="frame" x="0.0" y="64" width="95" height="145"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="95" height="145"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <animations/>
-                                <color key="backgroundColor" red="0.96078431369999995" green="0.64705882349999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </collectionViewCell>
-                        </cells>
+                        <cells/>
                         <connections>
                             <outlet property="dataSource" destination="xDK-JR-P37" id="ftX-Qv-eEq"/>
                             <outlet property="delegate" destination="xDK-JR-P37" id="PND-xZ-kSV"/>
@@ -64,6 +51,7 @@
                     </collectionView>
                     <navigationItem key="navigationItem" title="Library" id="EFO-Bf-j4A"/>
                     <connections>
+                        <outlet property="bookShelfCollectionView" destination="9bf-Wk-AX4" id="2N6-uc-UVJ"/>
                         <segue destination="cff-en-Sot" kind="push" identifier="showLogin" id="KL7-gV-KKu"/>
                     </connections>
                 </collectionViewController>

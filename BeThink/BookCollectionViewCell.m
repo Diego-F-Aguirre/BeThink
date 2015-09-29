@@ -7,7 +7,18 @@
 //
 
 #import "BookCollectionViewCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @implementation BookCollectionViewCell
+
+- (void)awakeFromNib {
+    // Initialization code
+}
+
+- (void)setCellWithBook:(BookModel *)book {
+    BTBookCollectionViewCell *reUseCell = [BTBookCollectionViewCell new];
+    reUseCell.book = book;
+    [reUseCell.bookCover sd_setImageWithURL:[NSURL URLWithString:book.imageURL]];
+}
 
 @end

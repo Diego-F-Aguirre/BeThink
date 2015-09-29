@@ -33,14 +33,14 @@
 }
 
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"showBookInShelf"]) {
-        BookModel *book = sender;
-        BookShelfCollectionViewController *dest = (BookShelfCollectionViewController *)segue.destinationViewController;
-        dest.book = book;
-    }
-    
-}
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    if ([segue.identifier isEqualToString:@"showBookInShelf"]) {
+//        BookModel *book = sender;
+//        BookShelfCollectionViewController *dest = (BookShelfCollectionViewController *)segue.destinationViewController;
+//        dest.book = book;
+//    }
+//    
+//}
 
 /*
 #pragma mark - Navigation
