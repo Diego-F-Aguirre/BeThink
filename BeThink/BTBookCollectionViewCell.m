@@ -18,8 +18,6 @@
 - (void)setCellWithBook:(BookModel *)book {
     self.book = book;
     [self.bookCover sd_setImageWithURL:[NSURL URLWithString:book.imageURL]];
-//    [self.bookCover setImage:book.imageURL];
-    //self.titleLabel.text = book.title;
 }
 
 

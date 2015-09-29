@@ -48,6 +48,11 @@
         book.bookId = dict[@"id"][@"__text"];
     }
     
+    //Currently incorrect. Waiting on GR forum response
+    if (dict[@"description"]) {
+        book.summary = dict[@"description"];
+    }
+    
     
     return book;
 }

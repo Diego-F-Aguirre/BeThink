@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="gNK-cR-x9N">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B17c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="gNK-cR-x9N">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -17,7 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="XEZ-a5-of7" kind="relationship" relationship="viewControllers" id="J6W-MQ-mGO"/>
@@ -29,7 +28,7 @@
             </objects>
             <point key="canvasLocation" x="-333" y="265"/>
         </scene>
-        <!--Book Shelf Collection View Controller-->
+        <!--Library-->
         <scene sceneID="hsh-Oo-N7L">
             <objects>
                 <collectionViewController id="xDK-JR-P37" customClass="BookShelfCollectionViewController" sceneMemberID="viewController">
@@ -63,7 +62,7 @@
                             <outlet property="delegate" destination="xDK-JR-P37" id="PND-xZ-kSV"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="EFO-Bf-j4A"/>
+                    <navigationItem key="navigationItem" title="Library" id="EFO-Bf-j4A"/>
                     <connections>
                         <segue destination="cff-en-Sot" kind="push" identifier="showLogin" id="KL7-gV-KKu"/>
                         <segue destination="x2A-Kc-aeU" kind="push" identifier="showBookFromShelf" id="YWW-o4-Qvz"/>
@@ -180,6 +179,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Xkk-HP-cUa">
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="2bt-8h-dyp">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="logout:" destination="Eyp-Nd-sKM" id="H9f-Ds-Xz8"/>
                                 <segue destination="cff-en-Sot" kind="push" id="Mlz-Nm-EiI"/>
@@ -269,7 +269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gPG-ld-XXg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1575" y="-254"/>
+            <point key="canvasLocation" x="1625" y="-254"/>
         </scene>
         <!--BookShelf-->
         <scene sceneID="HJE-bO-Pmz">
@@ -281,6 +281,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.81568627450980391" green="0.0078431372549019607" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -301,6 +306,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.81568627449999997" green="0.0078431372550000003" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -326,7 +336,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lzF-u8-XVe">
                                 <rect key="frame" x="0.0" y="108" width="320" height="460"/>
                                 <animations/>
-                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="h0L-cJ-Lre">
                                     <size key="itemSize" width="95" height="145"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -392,41 +402,114 @@
                                     <constraint firstAttribute="width" secondItem="o6M-PM-p0x" secondAttribute="height" multiplier="95:145" id="gEh-FU-NoX"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="I am a very big multi line title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eY5-ig-ABc">
-                                <rect key="frame" x="166" y="28" width="138" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am a very big multi line title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eY5-ig-ABc">
+                                <rect key="frame" x="166" y="8" width="138" height="42"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="oAj-Gk-rIu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWV-Gb-gUm">
-                                <rect key="frame" x="166" y="95" width="138" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWV-Gb-gUm">
+                                <rect key="frame" x="166" y="76" width="138" height="21"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="051-UQ-vjo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mfx-JC-Adh">
+                                <rect key="frame" x="-8" y="229" width="121" height="25"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.81568627449999997" green="0.0078431372550000003" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="121" id="ujZ-UR-aIO"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eam-py-v3g">
+                                <rect key="frame" x="12" y="231" width="92" height="20"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uLn-yc-AOP">
+                                <rect key="frame" x="16" y="259" width="288" height="196"/>
+                                <animations/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oa0-rK-N95">
+                                <rect key="frame" x="206" y="207" width="122" height="25"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.81568627449999997" green="0.0078431372550000003" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ps5-7z-sYr">
+                                <rect key="frame" x="216" y="209" width="112" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="a2s-Qg-YxE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="ps5-7z-sYr" firstAttribute="leading" secondItem="o6M-PM-p0x" secondAttribute="trailing" constant="72" id="210-K5-Qig"/>
+                            <constraint firstItem="Oa0-rK-N95" firstAttribute="leading" secondItem="o6M-PM-p0x" secondAttribute="trailing" constant="62" id="3Bo-5O-NOy"/>
+                            <constraint firstItem="ps5-7z-sYr" firstAttribute="trailing" secondItem="Oa0-rK-N95" secondAttribute="trailing" id="3bZ-hy-yPo"/>
+                            <constraint firstItem="uLn-yc-AOP" firstAttribute="bottom" secondItem="2je-JS-Ynu" secondAttribute="top" id="76T-5i-hz4"/>
+                            <constraint firstItem="Eam-py-v3g" firstAttribute="centerY" secondItem="mfx-JC-Adh" secondAttribute="centerY" id="AQD-5j-l92"/>
                             <constraint firstItem="eY5-ig-ABc" firstAttribute="leading" secondItem="o6M-PM-p0x" secondAttribute="trailing" constant="22" id="HCA-kr-Bzt"/>
                             <constraint firstItem="dWV-Gb-gUm" firstAttribute="top" secondItem="eY5-ig-ABc" secondAttribute="bottom" constant="26" id="Hd6-H4-Bhc"/>
+                            <constraint firstItem="uLn-yc-AOP" firstAttribute="top" secondItem="ps5-7z-sYr" secondAttribute="bottom" constant="29" id="HlL-58-aQx"/>
+                            <constraint firstItem="uLn-yc-AOP" firstAttribute="leading" secondItem="o6M-PM-p0x" secondAttribute="leading" id="IU1-zc-h7b"/>
+                            <constraint firstItem="Oa0-rK-N95" firstAttribute="centerY" secondItem="ps5-7z-sYr" secondAttribute="centerY" id="JIz-Ra-E6I"/>
                             <constraint firstItem="o6M-PM-p0x" firstAttribute="width" secondItem="doq-Tx-VEy" secondAttribute="width" multiplier="0.4" id="M7V-am-f0T"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eY5-ig-ABc" secondAttribute="trailing" id="MHv-Ug-ead"/>
+                            <constraint firstItem="Eam-py-v3g" firstAttribute="top" secondItem="o6M-PM-p0x" secondAttribute="bottom" constant="8" symbolic="YES" id="OKi-Vo-Db7"/>
                             <constraint firstItem="eY5-ig-ABc" firstAttribute="top" secondItem="o6M-PM-p0x" secondAttribute="top" id="TRH-5L-3hx"/>
+                            <constraint firstItem="uLn-yc-AOP" firstAttribute="top" secondItem="Eam-py-v3g" secondAttribute="bottom" constant="8" symbolic="YES" id="WA1-WT-Yh1"/>
                             <constraint firstItem="o6M-PM-p0x" firstAttribute="top" secondItem="VwR-Na-rpn" secondAttribute="bottom" constant="8" id="bn7-G3-Fs6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ps5-7z-sYr" secondAttribute="trailing" constant="-24" id="cCE-NQ-Ng1"/>
+                            <constraint firstItem="Eam-py-v3g" firstAttribute="leading" secondItem="doq-Tx-VEy" secondAttribute="leadingMargin" constant="-4" id="cns-87-ATI"/>
                             <constraint firstItem="o6M-PM-p0x" firstAttribute="leading" secondItem="doq-Tx-VEy" secondAttribute="leadingMargin" id="eI8-A6-TwO"/>
                             <constraint firstItem="dWV-Gb-gUm" firstAttribute="leading" secondItem="eY5-ig-ABc" secondAttribute="leading" id="gdJ-jw-PEc"/>
+                            <constraint firstItem="uLn-yc-AOP" firstAttribute="top" secondItem="Oa0-rK-N95" secondAttribute="bottom" constant="27" id="kXO-IH-l6m"/>
+                            <constraint firstItem="uLn-yc-AOP" firstAttribute="top" secondItem="mfx-JC-Adh" secondAttribute="bottom" constant="5" id="pK4-eH-gxQ"/>
+                            <constraint firstItem="dWV-Gb-gUm" firstAttribute="trailing" secondItem="uLn-yc-AOP" secondAttribute="trailing" id="qGQ-SO-91D"/>
                             <constraint firstItem="dWV-Gb-gUm" firstAttribute="trailing" secondItem="eY5-ig-ABc" secondAttribute="trailing" id="sm2-9q-B2w"/>
+                            <constraint firstItem="mfx-JC-Adh" firstAttribute="leading" secondItem="doq-Tx-VEy" secondAttribute="leadingMargin" constant="-24" id="x3u-MM-FB0"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Book" id="ZBI-mE-mee"/>
+                    <navigationItem key="navigationItem" title="Book" id="ZBI-mE-mee">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Nre-98-Vfd"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="authorLabel" destination="dWV-Gb-gUm" id="EqN-Uq-qzv"/>
                         <outlet property="bookCover" destination="o6M-PM-p0x" id="40X-zf-zDQ"/>
+                        <outlet property="bookDescription" destination="uLn-yc-AOP" id="BGd-SG-EpS"/>
+                        <outlet property="ratingLabel" destination="ps5-7z-sYr" id="tJj-tw-Wva"/>
                         <outlet property="titleLabel" destination="eY5-ig-ABc" id="UZL-9L-zOS"/>
                     </connections>
                 </viewController>
@@ -444,6 +527,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
+                        <color key="barTintColor" red="0.81568627449999997" green="0.0078431372550000003" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -461,7 +548,7 @@
         <image name="TabBar_Settings.png" width="75" height="75"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Mlz-Nm-EiI"/>
         <segue reference="YWW-o4-Qvz"/>
+        <segue reference="KL7-gV-KKu"/>
     </inferredMetricsTieBreakers>
 </document>

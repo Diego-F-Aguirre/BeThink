@@ -48,6 +48,8 @@
     [self.resultsDataSource loadBooks:query completionBlock:^{
         [self.resultsCollectionView reloadData];
     }];
+    
+    [searchBar resignFirstResponder];
 }
 
 
@@ -61,6 +63,7 @@
         BTBookViewController *dest = (BTBookViewController *)segue.destinationViewController;
         dest.book = book;
     }
+    
 }
 
 

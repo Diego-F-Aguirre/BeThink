@@ -12,14 +12,10 @@
 @interface BTBookViewController : UIViewController
 
 @property (strong, nonatomic) BookModel *book;
-
 @property (weak, nonatomic) IBOutlet UIImageView *bookCover;
-
-
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-
-
 @property (weak, nonatomic) IBOutlet UILabel *authorLabel;
-
+@property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
+@property (weak, nonatomic) IBOutlet UITextView *bookDescription;
 
 @end

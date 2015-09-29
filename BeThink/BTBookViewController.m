@@ -20,13 +20,12 @@
     [self.bookCover sd_setImageWithURL:[NSURL URLWithString:self.book.imageURL]];
     self.titleLabel.text = self.book.title;
     self.authorLabel.text = self.book.author;
-    // Do any additional setup after loading the view.
+//    self.bookDescription.text = self.book.summary;
+    NSString *ratingText = @"Rating: ";
+    NSString *ratingScore = [self.book.averageRating stringValue];
+    self.ratingLabel.text = [ratingText stringByAppendingString:ratingScore];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 /*
 #pragma mark - Navigation
