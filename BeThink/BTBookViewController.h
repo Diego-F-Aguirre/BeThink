@@ -18,4 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
 @property (weak, nonatomic) IBOutlet UITextView *bookDescription;
 
+
+- (IBAction)addBook:(id)sender;
+
 @end
