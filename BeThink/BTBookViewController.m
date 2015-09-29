@@ -9,6 +9,8 @@
 #import "BTBookViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "BookShelfCollectionViewController.h"
+#import "BookShelfDataSource.h"
+
 
 @interface BTBookViewController ()
 

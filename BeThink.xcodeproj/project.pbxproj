@@ -34,6 +34,7 @@
 		BCC743D81BAA6F3300A3FE1D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC743D71BAA6F3300A3FE1D /* LoginViewController.m */; };
 		BCC743DB1BAA6F4F00A3FE1D /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC743DA1BAA6F4E00A3FE1D /* SignUpViewController.m */; };
 		BCC743DE1BAA802800A3FE1D /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC743DD1BAA802800A3FE1D /* SettingsViewController.m */; };
+		BCCBFFB81BBB26840070C4E4 /* BookShelfDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCBFFB71BBB26840070C4E4 /* BookShelfDataSource.m */; settings = {ASSET_TAGS = (); }; };
 		BCD1B4B71BB0564A0094C42A /* BookCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD1B4B61BB0564A0094C42A /* BookCollectionViewCell.m */; };
 		BCD1B4BA1BB0BF8E0094C42A /* BTSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD1B4B91BB0BF8E0094C42A /* BTSearchViewController.m */; };
 		BCD1B4BD1BB0C0DE0094C42A /* BTResultsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD1B4BC1BB0C0DE0094C42A /* BTResultsDataSource.m */; };
@@ -93,6 +94,8 @@
 		BCC743DA1BAA6F4E00A3FE1D /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		BCC743DC1BAA802800A3FE1D /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		BCC743DD1BAA802800A3FE1D /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		BCCBFFB61BBB26840070C4E4 /* BookShelfDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookShelfDataSource.h; sourceTree = "<group>"; };
+		BCCBFFB71BBB26840070C4E4 /* BookShelfDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookShelfDataSource.m; sourceTree = "<group>"; };
 		BCD1B4B51BB0564A0094C42A /* BookCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookCollectionViewCell.h; sourceTree = "<group>"; };
 		BCD1B4B61BB0564A0094C42A /* BookCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookCollectionViewCell.m; sourceTree = "<group>"; };
 		BCD1B4B81BB0BF8E0094C42A /* BTSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTSearchViewController.h; sourceTree = "<group>"; };
@@ -166,6 +169,8 @@
 				BCC743961BA9CEF200A3FE1D /* AppDelegate.m */,
 				BCC743BA1BAA512100A3FE1D /* BookShelfCollectionViewController.h */,
 				BCC743BB1BAA512100A3FE1D /* BookShelfCollectionViewController.m */,
+				BCCBFFB61BBB26840070C4E4 /* BookShelfDataSource.h */,
+				BCCBFFB71BBB26840070C4E4 /* BookShelfDataSource.m */,
 				BCD1B4B51BB0564A0094C42A /* BookCollectionViewCell.h */,
 				BCD1B4B61BB0564A0094C42A /* BookCollectionViewCell.m */,
 				BCC743D61BAA6F3300A3FE1D /* LoginViewController.h */,
@@ -403,6 +408,7 @@
 			files = (
 				BCD1B4B71BB0564A0094C42A /* BookCollectionViewCell.m in Sources */,
 				BCD1B4C31BB0D4C80094C42A /* BookModel.m in Sources */,
+				BCCBFFB81BBB26840070C4E4 /* BookShelfDataSource.m in Sources */,
 				BC7E4D681BB370FF0035D24B /* BTBookViewController.m in Sources */,
 				BCC743D81BAA6F3300A3FE1D /* LoginViewController.m in Sources */,
 				BCC743DB1BAA6F4F00A3FE1D /* SignUpViewController.m in Sources */,

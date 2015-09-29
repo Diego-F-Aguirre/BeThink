@@ -12,4 +12,8 @@
 
 @interface BookCollectionViewCell : UICollectionViewCell
 
+//@property (nonatomic, strong) BookModel *book;
+//
+- (void) setCellWithBook:(BookModel *)book;
+
 @end
