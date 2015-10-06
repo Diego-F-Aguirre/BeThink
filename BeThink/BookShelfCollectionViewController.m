@@ -42,20 +42,29 @@ static NSString * const reuseIdentifier = @"BookCell";
     
     [self.bookShelfCollectionView registerNib:[UINib nibWithNibName:@"BTBookCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
     
-    // Register cell classes
-//    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
-    // Do any additional setup after loading the view.
 }
 
 - (void) viewDidAppear:(BOOL)animated{
     [self.bookShelfCollectionView reloadData];
 }
 
+- (void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    BTDataSource *dataSource = [BTDataSource sharedInstance];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"UserBooks"];
+    NSString *objectId = dataSource.userBookShelf.objectId;
+    [query getObjectInBackgroundWithId:objectId block:^(PFObject *object, NSError *error) {
+        //dataSource saveNewBook:dataSource.userBookShelf.objectId];
+    }];
+}
+
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     BookCollectionViewCell * cell = (BookCollectionViewCell *) [collectionView dequeueReusableCellWithReuseIdentifier:@"BookCell" forIndexPath:indexPath];
     [cell setCellWithBook: [BTDataSource sharedInstance].savedBooks[indexPath.item]];
+    
     return cell;
 }
 
@@ -71,6 +80,7 @@ static NSString * const reuseIdentifier = @"BookCell";
         default:
             return 0;
     }
+
 }
 
 

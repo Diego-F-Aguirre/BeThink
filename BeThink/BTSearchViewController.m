@@ -10,6 +10,7 @@
 #import "BTDataSource.h"
 #import "BookModel.h"
 #import "BTBookViewController.h"
+#import "BTBookCollectionViewCell.h"
 
 @interface BTSearchViewController ()
 
@@ -51,7 +52,6 @@
     
     [searchBar resignFirstResponder];
 }
-
 
 
 #pragma mark - Navigation

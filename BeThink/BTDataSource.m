@@ -63,4 +63,25 @@
     }];
 }
 
+- (void)saveNewBook:(BookModel *)newBook {
+    // add new book to parse
+    // add to savedBooks
+    // do that here
+    
+    self.userBookShelf = [PFObject objectWithClassName:@"UserBooks"];
+    NSData *bookData = UIImagePNGRepresentation([UIImage imageNamed:newBook.imageURL]);
+    PFFile *savedBookFile = [PFFile fileWithData:bookData];
+    
+    [self.userBookShelf setObject:savedBookFile forKey:@"UserBooks"];
+    
+    
+    [self.userBookShelf saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (error) {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry! Book not saved. Try again!" message:[error.userInfo objectForKey:@"error"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            
+            [alertView show];
+        }
+    }];
+}
+
 @end
