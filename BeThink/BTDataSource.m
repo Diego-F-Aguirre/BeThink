@@ -12,6 +12,8 @@
 
 @implementation BTDataSource
 
+NSString *const bookDidGetSaved =@"bookDidGetSaved";
+
 + (instancetype) sharedInstance {
     static dispatch_once_t once;
     static id sharedInstance;
@@ -64,24 +66,31 @@
 }
 
 - (void)saveNewBook:(BookModel *)newBook {
-    // add new book to parse
-    // add to savedBooks
-    // do that here
-    
-    self.userBookShelf = [PFObject objectWithClassName:@"UserBooks"];
-    NSData *bookData = UIImagePNGRepresentation([UIImage imageNamed:newBook.imageURL]);
-    PFFile *savedBookFile = [PFFile fileWithData:bookData];
-    
-    [self.userBookShelf setObject:savedBookFile forKey:@"UserBooks"];
-    
-    
-    [self.userBookShelf saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (error) {
+   
+    PFObject *userBook = [PFObject objectWithClassName:@"UserBooks"];
+    userBook[@"UserID"] = [PFUser currentUser];
+    userBook[@"Title"] = newBook.title;
+    userBook[@"Author"] = newBook.author;
+    //userBook[@"Description"] = newBook.summary;
+    userBook[@"Rating"] = newBook.averageRating;
+    userBook[@"GoodRead_ID"] = newBook.bookId;
+    userBook[@"CoverArt"] = newBook.imageURL;
+    [userBook saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            // Fire NSNotificationCenter
+            NSMutableArray *addedBooks = [userBook mutableCopy];
+            self.savedBooks = addedBooks;
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:bookDidGetSaved object:userBook];
+            
+        } else {
+            // There was a problem, check error.description
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry! Book not saved. Try again!" message:[error.userInfo objectForKey:@"error"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
             
             [alertView show];
         }
     }];
+
 }
 
 @end

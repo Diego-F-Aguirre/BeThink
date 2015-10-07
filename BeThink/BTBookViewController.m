@@ -31,9 +31,8 @@
 
 - (IBAction)addBook:(id)sender {
     
-    [[BTDataSource sharedInstance].savedBooks addObject: self.book];
-//    [[BTDataSource sharedInstance] saveNewBook:self.book];
-    //wait for completion
+    [[BTDataSource sharedInstance] saveNewBook:self.book];
+
     
 }
 

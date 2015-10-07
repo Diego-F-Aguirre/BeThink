@@ -13,6 +13,8 @@
 
 @interface BTDataSource : NSObject <UICollectionViewDataSource>
 
+extern NSString *const bookDidGetSaved;
+
 @property (strong, nonatomic) NSMutableArray *searchedBooks;
 @property (strong, nonatomic) NSMutableArray *savedBooks;
 @property (nonatomic, strong) PFObject *userBookShelf;

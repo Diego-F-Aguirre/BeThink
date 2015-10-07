@@ -42,6 +42,12 @@ static NSString * const reuseIdentifier = @"BookCell";
     
     [self.bookShelfCollectionView registerNib:[UINib nibWithNibName:@"BTBookCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
     
+    [[NSNotificationCenter defaultCenter] addObserverForName:bookDidGetSaved object:nil queue:nil usingBlock:^(NSNotification *book) {
+        
+        [BTDataSource sharedInstance].savedBooks = book.object;
+    }];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:bookDidGetSaved name:nil object:nil];
 }
 
 - (void) viewDidAppear:(BOOL)animated{
