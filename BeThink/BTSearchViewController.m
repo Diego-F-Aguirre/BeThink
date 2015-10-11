@@ -12,7 +12,7 @@
 #import "BTBookViewController.h"
 #import "BTBookCollectionViewCell.h"
 
-@interface BTSearchViewController ()
+@interface BTSearchViewController () 
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
@@ -20,22 +20,40 @@
 
 @property (strong, nonatomic) BTDataSource *resultsDataSource;
 
+@property (strong, nonatomic) NSArray *searchedBooks;
+
 @end
 
 @implementation BTSearchViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.resultsDataSource = [BTDataSource new];
+    //self.resultsDataSource = [BTDataSource new];
     // Do any additional setup after loading the view.
-    self.resultsCollectionView.dataSource = self.resultsDataSource;
+    //self.resultsCollectionView.dataSource = self.resultsDataSource;
     [self.resultsCollectionView registerNib:[UINib nibWithNibName:@"BTBookCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"BookCell"];
+    self.resultsCollectionView.dataSource = self;
+}
+
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    BTBookCollectionViewCell * cell = (BTBookCollectionViewCell *) [collectionView dequeueReusableCellWithReuseIdentifier:@"BookCell" forIndexPath:indexPath];
+    [cell setCellWithBook:self.searchedBooks[indexPath.item]];
+    return cell;
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.searchedBooks.count;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
-    [self performSegueWithIdentifier:@"showBookFromSearch" sender:self.resultsDataSource.searchedBooks[indexPath.item]];
+    [self performSegueWithIdentifier:@"showBookFromSearch" sender:self.searchedBooks[indexPath.item]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,7 +64,8 @@
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
 
     NSString *query = searchBar.text;
-    [self.resultsDataSource loadBooks:query completionBlock:^{
+    [[BTDataSource sharedInstance] loadBooks:query completionBlock:^{
+        self.searchedBooks = [BTDataSource sharedInstance].searchedBooks;
         [self.resultsCollectionView reloadData];
     }];
     

@@ -42,16 +42,21 @@ static NSString * const reuseIdentifier = @"BookCell";
     
     [self.bookShelfCollectionView registerNib:[UINib nibWithNibName:@"BTBookCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
     
+
+}
+
+
+- (void) viewDidAppear:(BOOL)animated{
+//    [self.bookShelfCollectionView reloadData];
+    
     [[NSNotificationCenter defaultCenter] addObserverForName:bookDidGetSaved object:nil queue:nil usingBlock:^(NSNotification *book) {
         
-        [BTDataSource sharedInstance].savedBooks = book.object;
+        //[BTDataSource sharedInstance].savedBooks = book.object;
+        NSLog(@"reload table about to fire");
+        [self.bookShelfCollectionView reloadData];
     }];
     
     [[NSNotificationCenter defaultCenter] removeObserver:bookDidGetSaved name:nil object:nil];
-}
-
-- (void) viewDidAppear:(BOOL)animated{
-    [self.bookShelfCollectionView reloadData];
 }
 
 - (void) viewWillAppear:(BOOL)animated{

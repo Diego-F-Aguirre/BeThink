@@ -29,13 +29,15 @@ NSString *const bookDidGetSaved =@"bookDidGetSaved";
     {
         self.searchedBooks = [@[] mutableCopy];
         self.savedBooks = [@[] mutableCopy];
+        [self fetchUserBookCollection];
     }
     return self;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     BTBookCollectionViewCell * cell = (BTBookCollectionViewCell *) [collectionView dequeueReusableCellWithReuseIdentifier:@"BookCell" forIndexPath:indexPath];
-    [cell setCellWithBook:self.searchedBooks[indexPath.item]];
+    //[cell setCellWithBook:self.searchedBooks[indexPath.item]];
+    
     return cell;
 }
 
@@ -44,14 +46,16 @@ NSString *const bookDidGetSaved =@"bookDidGetSaved";
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    switch (section) {
-    case 0:
-        return self.searchedBooks.count;
-        break;
-    default:
-        return 0;
-    }
+//    switch (section) {
+//        case 0:
+//            return 0; //self.searchedBooks.count;
+//            break;
+//        default:
+//            return 0;
+//    }
+    return self.bookArray.count;
 }
+
 
 - (void)loadBooks:(NSString *)queryString completionBlock:(void (^)())completionBlock {
     [[BTAPIClient sharedManager] searchWithQuery:queryString completionBlock:^(BOOL success, NSArray *results) {
@@ -65,6 +69,28 @@ NSString *const bookDidGetSaved =@"bookDidGetSaved";
     }];
 }
 
+- (void)fetchUserBookCollection {
+    PFQuery *query = [PFQuery queryWithClassName:@"UserBooks"];
+    [query whereKey:@"UserID" equalTo:[PFUser currentUser]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %lu scores.", (unsigned long)objects.count);
+            // Do something with the found objects
+            for (PFObject *object in objects) {
+                NSLog(@"%@", object.objectId);
+                //if object exists then skip
+                //[self.savedBooks addObject:object];
+            }
+            [self.savedBooks addObjectsFromArray:objects];
+            [[NSNotificationCenter defaultCenter] postNotificationName:bookDidGetSaved object:nil];
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+}
+
 - (void)saveNewBook:(BookModel *)newBook {
    
     PFObject *userBook = [PFObject objectWithClassName:@"UserBooks"];
@@ -75,14 +101,58 @@ NSString *const bookDidGetSaved =@"bookDidGetSaved";
     userBook[@"Rating"] = newBook.averageRating;
     userBook[@"GoodRead_ID"] = newBook.bookId;
     userBook[@"CoverArt"] = newBook.imageURL;
+
+    
+    PFQuery *checkUserBookQuery = [PFQuery queryWithClassName:@"UserBooks"];
+    [checkUserBookQuery whereKey:@"UserID" equalTo:userBook[@"UserID"]];
+    [checkUserBookQuery whereKey:@"GoodRead_ID" equalTo:userBook[@"GoodRead_ID"]];
+    
+    [checkUserBookQuery countObjectsInBackgroundWithBlock:^(int number, NSError * _Nullable error) {
+        if (error){
+            NSLog(@"Network error");
+        }
+        else if (number == 0) {
+            //add new user book
+            [self makeSaveNewBookRequest:userBook];
+        }
+        else if (number > 0) {
+            NSLog(@"User already has this book");
+        }
+    
+        
+    }];
+    
+//    
+//    [checkUserBookQuery getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+//        if(!error && object == nil) {
+//            //ADD NEW USER BOOK
+//            [self makeSaveNewBookRequest:userBook];
+//            
+//        }
+//        else if (error) {
+//            //SOME NETWORK ERROR
+//            NSLog(@"Network error");
+//        }
+//        else if (object){
+//            //USERBOOK aldready exist
+//            NSLog(@"User already has this book");
+//        }
+//        else {
+//            
+//        }
+//    }];
+    
+    
+
+}
+
+
+- (void)makeSaveNewBookRequest:(PFObject *)userBook {
     [userBook saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        
         if (succeeded) {
-            // Fire NSNotificationCenter
-            NSMutableArray *addedBooks = [userBook mutableCopy];
-            self.savedBooks = addedBooks;
-            
-            [[NSNotificationCenter defaultCenter] postNotificationName:bookDidGetSaved object:userBook];
-            
+
+            [self fetchUserBookCollection];
         } else {
             // There was a problem, check error.description
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry! Book not saved. Try again!" message:[error.userInfo objectForKey:@"error"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -90,7 +160,6 @@ NSString *const bookDidGetSaved =@"bookDidGetSaved";
             [alertView show];
         }
     }];
-
 }
 
 @end

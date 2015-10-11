@@ -19,6 +19,8 @@ extern NSString *const bookDidGetSaved;
 @property (strong, nonatomic) NSMutableArray *savedBooks;
 @property (nonatomic, strong) PFObject *userBookShelf;
 
+@property (nonatomic, strong) NSArray *bookArray;
+
 - (void)loadBooks:(NSString *)queryString completionBlock:(void (^)())completionBlock;
 - (void)saveNewBook:(BookModel *)newBook;
 +(instancetype) sharedInstance;

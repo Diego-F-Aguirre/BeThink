@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BTSearchViewController : UIViewController <UICollectionViewDelegate, UISearchBarDelegate >
+@interface BTSearchViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate >
 
 @end
