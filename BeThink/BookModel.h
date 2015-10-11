@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
 
-@interface BookModel : NSObject
+@interface BookModel : PFObject <PFSubclassing>
 
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *author;

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "BTBookCollectionViewCell.h"
+#import <Parse/Parse.h>
 
 @interface BookShelfCollectionViewController : UICollectionViewController <UICollectionViewDelegate>
 

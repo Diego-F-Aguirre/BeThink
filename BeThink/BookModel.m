@@ -10,18 +10,23 @@
 
 @implementation BookModel
 
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        self.bookId = @(0);
-        self.title = @"";
-        self.author = @"";
-        self.imageURL = @"";
-        self.summary = @"";
-        self.averageRating = @0;
-    }
-    return self;
+
++ (NSString*)parseClassName {
+    return @"UserBooks";
 }
+
+//- (instancetype)init {
+//    self = [super init];
+//    if (self) {
+//        self.bookId = @(0);
+//        self.title = @"";
+//        self.author = @"";
+//        self.imageURL = @"";
+//        self.summary = @"";
+//        self.averageRating = @0;
+//    }
+//    return self;
+//}
 
 + (BookModel *)bookFromDictionary:(NSDictionary *)dict {
     BookModel *book = [BookModel new];
@@ -42,6 +47,7 @@
     
     if (dict[@"best_book"][@"image_url"]) {
         book.imageURL = dict[@"best_book"][@"image_url"];
+        book[@"CoverArt"] = dict[@"best_book"][@"image_url"];
     }
     
     if (dict[@"id"][@"__text"]) {
@@ -66,5 +72,14 @@
     }
     return booksArray;
 }
+
+
+- (NSString *)imageURL{
+    return self[@"CoverArt"];
+}
+
+//- (NSString *)title {
+//    return self[@"Title"];
+//}
 
 @end

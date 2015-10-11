@@ -8,13 +8,21 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "BookModel.h"
+#import <Parse/Parse.h>
 
 @interface BTDataSource : NSObject <UICollectionViewDataSource>
 
+extern NSString *const bookDidGetSaved;
+
 @property (strong, nonatomic) NSMutableArray *searchedBooks;
 @property (strong, nonatomic) NSMutableArray *savedBooks;
+@property (nonatomic, strong) PFObject *userBookShelf;
+
+@property (nonatomic, strong) NSArray *bookArray;
 
 - (void)loadBooks:(NSString *)queryString completionBlock:(void (^)())completionBlock;
+- (void)saveNewBook:(BookModel *)newBook;
 +(instancetype) sharedInstance;
 
 @end

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import "BookModel.h"
 
 
 
@@ -24,6 +25,8 @@
     // [Optional] Power your app with Local Datastore. For more info, go to
     // https://parse.com/docs/ios_guide#localdatastore/iOS
     [Parse enableLocalDatastore];
+    
+    [BookModel registerSubclass];
     
     // Initialize Parse.
     [Parse setApplicationId:@"jPEyNeGzb5LC63OkuLUhpMUgfQ7Ik6wT2L1QGcm9"
